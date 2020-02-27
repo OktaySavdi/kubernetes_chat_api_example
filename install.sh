@@ -207,7 +207,7 @@ printf  "\n${Yellow} Installing Ingress\n ${Color_Off}"
         exit 1
     }
 
-array=( chat rabbit kibana )
+array=( chat rabbit kibana api )
 for i in "${array[@]}"
 do
     URL=$(kubectl get ingresses $i -n $Namespace -o=jsonpath='{.spec.rules[*].host}')
