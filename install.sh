@@ -185,7 +185,7 @@ printf  "${Yellow} Chat Install\n ${Color_Off}"
 while [[ $(kubectl get pods -l app=chat -n $Namespace -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do printf "." && sleep 1; done
 
 ###### Api #######
-printf  "${Yellow} Api Install\n ${Color_Off}"
+printf  "\n${Yellow} Api Install\n ${Color_Off}"
 
  {
         kubectl create -f api.yaml -n $Namespace
